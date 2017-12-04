@@ -1,0 +1,186 @@
+<style type="text/css">
+    header#skin1-header > nav.category > div > ul > li:nth-last-child(1),
+    header#skin1-header > nav.category > div > ul > li:nth-last-child(2),
+    header#skin1-header > nav.category > div > ul > li:nth-last-child(3){
+        display:none;
+    }
+
+    header#skin1-header > nav.category{
+        background: #FFF;
+        border-top: 1px solid #EAEAEA;
+        border-bottom: 3px solid rgb(235,142,155);
+    }
+
+    header#skin1-header > nav.category > div > ul > li > a{
+        color:#333;
+    }
+    header#skin1-header > nav.category > div > ul > li > a:hover{
+        color:rgb(235,142,155);
+        border-bottom:1px solid rgb(235,142,155);
+    }
+
+    header#skin1-header > nav.category > div > ul > li > a:hover ~ ul,
+    header#skin1-header > nav.category > div > ul > li > a:focus ~ ul{
+        border: 1px solid #ccc;
+        border-radius: 0;
+        box-shadow:0;
+    }
+    .maxwidth{
+        max-width:1200px;
+        margin:0 auto;
+        text-align:right;
+    }
+    #utility_menu{
+        background:#dcdcdc;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+    }
+    #utility_menu ul{
+        display:block;
+        text-align:right;
+    }
+    #utility_menu ul li{
+        display:inline-block;
+    }
+    #utility_menu ul li.bar{
+        border-left: 1px solid #bababa;
+        width: 1px;
+        height: 9px;
+    }
+    #utility_menu ul li a{
+        display:inline-block;
+        padding:5px;
+    }
+    /**/
+    html:not(.draw-gnb):not(.bottom-nav) header#skin1-header{
+        top:25px;
+    }
+    /*아이콘변경*/
+    header#skin1-header .head > .quick li > a:hover > span:nth-of-type(1):before,
+    header#skin1-header .head > .quick li > a:active > span:nth-of-type(1):before
+    {
+        color:transparent;
+    }
+    header#skin1-header .head > .quick li > a > span:nth-of-type(1):before{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color:transparent;
+    }
+
+
+    header#skin1-header .head > .quick li > a.signin > span:nth-of-type(1):before{
+        background-image:url('http://sweetplus.jp/PartnerData/0V/PartnerInfo/2017/10/26/nhkx4iy4.ftg.jpg');
+    }
+    header#skin1-header .head > .quick li > a.notifi > span:nth-of-type(1):before{
+        background-image:url('http://sweetplus.jp/PartnerData/0V/PartnerInfo/2017/11/17/efaer210.okd.png');
+    }
+    header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1):before{
+        background-image:url('http://sweetplus.jp/PartnerData/0V/PartnerInfo/2017/10/26/g12hgtcj.3px.jpg');
+    }
+    @media screen and (min-width: 0.0625em){
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + div + .container,
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + .container{
+            margin-top:70px;
+        }
+    }
+    @media screen and (min-width: 48em){
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + div + .container,
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + .container{
+            margin-top:133px;
+        }
+
+
+        /*검색창 디자인*/
+        /*header#skin1-header .search-box {
+            top: 18px;
+            right: auto;
+            background-color: transparent;
+        }
+        header#skin1-header .search-box:hover {
+            top: 5px;
+        }*/
+    }
+    @media screen and (min-width: 75em){
+
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + div + .container,
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header + .container{
+            margin-top:0;
+        }
+
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header.fixed{
+            top:-82px;
+        }
+        html:not(.draw-gnb):not(.bottom-nav) header#skin1-header.fixed .logo{
+            top:45px;
+        }
+
+        header#skin1-header .head h1 img{
+            max-height:28px !important;
+        }
+
+
+        /*검색창 디자인*/
+        /*header#skin1-header .search-box {
+            top: 60px;
+            right: auto;
+            background-color: transparent;
+        }
+
+        header#skin1-header .search-box:hover {
+            top: 40px;
+        }*/
+    }
+    /*검색창 디자인*/
+    #skin1-container .search-box {
+        border:none;
+        border-bottom:1px solid rgb(235,142,155);
+        border-radius: 0;
+        background-color: #fff;
+    }/*
+header#skin1-header .search-box:hover {
+    max-width: 400px;
+    height: 50px;
+    bottom: auto;
+    border: 1px solid #e2e2e2;
+    background: #fff url(commonCss) no-repeat;
+    border-radius: 0;
+}
+header#skin1-header .search-box:hover .box-input input {
+    height: 19px;
+    line-height: 51px;
+    font-size: 1.52857rem;
+    font-weight: bold;
+    color: #000;
+}
+header#skin1-header .search-box:hover button {
+    top: 6px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+header#skin1-header .search-box:hover button span:before {
+    font-size: 26px;
+}*/
+</style>
+<div id="utility_menu">
+    <div class="maxwidth">
+        <ul><!-- 호무 -->
+            <li><a href="http://sweetplus.jp/">ホーム</a></li>
+            <li class="bar">&nbsp;</li>
+            <!-- 뉴스 -->
+            <li><a href="http://sweetplus.jp/Board/News">お知らせ</a></li>
+            <li class="bar">&nbsp;</li>
+            <!-- 장바구니 -->
+            <li><a href="http://www.sweetplus.jp/Cart">カート</a></li>
+            <li class="bar">&nbsp;</li>
+            <!-- 마이페이지 -->
+            <li><a href="http://www.sweetplus.jp/mypage/MyHome">マイページ</a></li>
+            <li class="bar">&nbsp;</li>
+        </ul>
+    </div>
+</div>
+
+<div style="text-align:center"><a href="http://sweetplus.jp"><img alt="splogo.png" src="/PartnerData/0V/PartnerInfo/2017/10/22/w34s55d5.ul5.png" /></a></div>

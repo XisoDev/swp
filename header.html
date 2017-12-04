@@ -1,0 +1,135 @@
+<style>
+body{
+    background-color:#FFF;
+}
+header#skin1-header > nav.category > div > ul > li:nth-last-child(1)
+,header#skin1-header.fixed > nav.category > div > ul > li:nth-last-child(2)
+,header#skin1-header.fixed > nav.category > div > ul > li:nth-last-child(3)
+{
+    display:none;
+}
+header#skin1-header > nav.category > div > ul > li:nth-last-child(3) {
+    border-left: 1px solid #ccc;
+}
+
+header#skin1-header {
+    background-color: #fcfcfc;
+}
+header#skin1-header > nav.category {
+    background: #FFF;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 4px solid #1f1f1f;
+}
+header#skin1-header > nav.category > div > ul > li > a:hover ~ ul,
+header#skin1-header > nav.category > div > ul > li > a:focus ~ ul{
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow:0;
+}
+}
+@media screen and (min-width: 75em){
+    header#skin1-header .head h1 img{
+        margin-top: -6px;
+        max-height: 30px;
+    }
+}
+/*search box*/
+header#skin1-header .search-box:hover{
+    height: 50px;
+    bottom: 0;
+    border: 3px solid #444;
+    border-radius: 0;
+}
+header#skin1-header .search-box:hover .box-input{
+    padding: 10px;
+}
+header#skin1-header .search-box:hover .box-input input {
+    height: 24px;
+    line-height: 24px;
+    font-size: 1.42857rem;
+}
+header#skin1-header .search-box:hover button{
+    HEIGHT:45px;
+}
+header#skin1-header .search-box:hover button span:before{
+    font-size:25px;
+}
+
+/*Quickmenu*/
+header#skin1-header .head > .quick > li,
+header#skin1-header .head > .quick li > a{
+    width:auto;
+    height:auto;
+    text-decoration:underline;
+}
+header#skin1-header .head > .quick li > a > span:nth-of-type(1):before{
+    color:#666;
+    font-size:1rem;
+    padding-top: 9px;
+}
+header#skin1-header .head > .quick li > a.signin > span:nth-of-type(1)::before {
+    content: " アカウント";
+}
+header#skin1-header .head > .quick li > a.notifi > span:nth-of-type(1)::before {
+    content: " 通知";
+}
+header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
+    content: " カート";
+}
+
+@media screen and (max-width: 48em){
+    header#skin1-header .head > .quick li > a.signin > span:nth-of-type(1)::before {
+        content: "アカウント";
+    }
+    header#skin1-header .head > .quick li > a.notifi > span:nth-of-type(1)::before {
+        content: "通知";
+    }
+    header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
+        content: "カート";
+    }
+}
+/*product thumbnail*/
+.style-item-grid li a > span.name {
+    font-weight: lighter;
+    font-size: 12px;
+    text-align:left;
+}
+.style-item-grid li a > span.price{
+    margin-top: 2%;
+    font-size: 12px;
+    color: #e08f9d;
+    font-weight: bold;
+    text-align:left;
+}
+.style-item-grid li a > span.soldout{
+    color:red;
+    text-align:left;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+.style-item-grid li a > span.rating{
+    display:none;
+    text-align:left;
+}
+.r10-10 > * .con:before {
+    padding-top: 143%;
+}
+
+/*깜빡이게*/
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+</style>
+
+<div style="text-align:center"><a href="http://sweetplus.jp"><img alt="logo.png" src="/PartnerData/0V/PartnerInfo/2017/12/03/ygxwusls.zcv.png" /></a></div>

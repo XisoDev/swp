@@ -1,0 +1,60 @@
+
+<!-- Global site tag (gtag.js) - Google AdWords: 827221296 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-827221296"></script>
+<script>
+    //구글애드워즈
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-827221296');
+
+    //픽셀전환
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '282249585619362');
+    fbq('track', 'PageView');
+</script><noscript>
+    <img height="1" width="1" style="display:none"
+                        src="https://www.facebook.com/tr?id=282249585619362&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Channel Plugin Scripts -->
+<script>
+    window.channelPluginSettings = {
+        "plugin_id": "e77795db-4c52-4e9f-9839-1b31baba23e0",
+//        "user": {
+//            "id": angular.element(document.body).injector().get('$CurrentUser').UserId,
+//            "name": angular.element(document.body).injector().get('$CurrentUser').UserName,
+//            "mobileNumber": false,
+//            "meta": {
+//                "email": angular.element(document.body).injector().get('$CurrentUser').UserEmail
+//            }
+//        }
+    };
+    (function() {
+        var node = document.createElement('div');
+        node.id = 'ch-plugin';
+        document.body.appendChild(node);
+        var async_load = function() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+            s.charset = 'UTF-8';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        };
+        if (window.attachEvent) {
+            window.attachEvent('onload', async_load);
+        } else {
+            window.addEventListener('load', async_load, false);
+        }
+    })();
+</script>
