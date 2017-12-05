@@ -1,49 +1,204 @@
-<!-- 메인 슬라이더 -->
-<div arrows="" autoplay="10000" dots="" random="" slide="">
+<style>
+    .slide .slick-dots li button{
+        padding:5px;
+    }
+    .slide .slick-dots{
+        bottom:-30px;
+    }
+    .tab_content{
+        display:none;
+    }
+    .tab_menu a{
+        display:block;
+        padding:5px;
+        text-align:center;
+        font-weight:bold;
+        color:#444;
+        background:#eee;
+        border-right:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+    .tab_menu li.active a{
+        color:deeppink;
+        background:#FFF;
+        border-bottom:none;
+    }
+    .itembox{
+        padding:15px;
+    }
+    .itembox img{
+        max-width:100%;
+    }
+    .itembox span.name {
+        font-weight: lighter;
+        font-size: 12px;
+        text-align: left;
+        display: block;
+        margin-top: 5%;
+        line-height: 1.2;
+        overflow: hidden;
+    }
+    .itembox span.price {
+        margin-top: 2%;
+        font-size: 12px;
+        color: #e08f9d;
+        font-weight: bold;
+        text-align: left;
+        display: block;
+    }
+    .itembox span.price.sale .default {
+        text-decoration: line-through;
+    }
+    .itembox span.price.sale .sale {
+        margin-left: 10px;
+        color: #888D94;
+    }
+    .itembox ul{
+        margin-top:0 !important;
+    }
+
+    .videoContainer{
+        margin-top:10px !important;
+        padding-top:56.25%;
+        position:relative;
+    }
+    .videoContainer iframe{
+        position:absolute;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+    }
+</style>
+<!--큰슬라이더-->
+<div arrows="" autoplay="4000" dots="false" random="" slide="">
     <div>
-        <div style="float:left; width:32%"><a href="/Goods/87941"><img alt="슬라이드1.png" src="/PartnerData/0V/PartnerInfo/2017/10/31/4djevagn.mwl.jpg" /></a></div>
-
-        <div style="float:left; width:2%">&nbsp;</div>
-
-        <div style="float:left; width:32%"><a href="/Goods/87941"><img alt="슬라이드1.png" src="/PartnerData/0V/PartnerInfo/2017/10/31/4djevagn.mwl.jpg" /></a></div>
-
-        <div style="float:left; width:2%">&nbsp;</div>
-
-        <div style="float:left; width:32%"><a href="/Goods/87941"><img alt="슬라이드1.png" src="/PartnerData/0V/PartnerInfo/2017/10/31/4djevagn.mwl.jpg" /></a></div>
+        <a href="http://www.sweetplus.jp/Goods/87670"><img alt="메인배너1.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/bon1dxqq.5az.png" /></a>
     </div>
-
-    <div>&nbsp;</div>
-
-    <div><br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <a href="http://www.sweetplus.jp/Goods/87670">http://www.sweetplus.jp/Goods/87670</a><img alt="메인배너1.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/bon1dxqq.5az.png" /><br />
-        <br />
-        <a href="http://www.sweetplus.jp/Goods/88792">http://www.sweetplus.jp/Goods/88792</a><br />
-        <br />
-        <img alt="메인배너3.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/fdxaa4h4.5wb.png" /> <img alt="메인배너4.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/hezmblto.hiq.png" /><br />
-        <a href="http://www.sweetplus.jp/Goods/88823">http://www.sweetplus.jp/Goods/88823</a><br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <a href="http://www.sweetplus.jp/Goods/88826">http://www.sweetplus.jp/Goods/88826</a><br />
-        <img alt="메인배너5.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/bcpuwzge.2ax.png" /><br />
-        <br />
-        <br />
-        &nbsp;</div>
+    <div>
+        <a href="http://www.sweetplus.jp/Goods/88792"><img alt="메인배너3.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/fdxaa4h4.5wb.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.sweetplus.jp/Goods/88823"><img alt="메인배너4.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/hezmblto.hiq.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.sweetplus.jp/Goods/88826"><img alt="메인배너5.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/bcpuwzge.2ax.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.sweetplus.jp/Goods/87253"><img alt="메인배너6.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/l2qdi5yb.njn.png" /></a>
+    </div>
 </div>
-<br />
-<img alt="메인배너6.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/l2qdi5yb.njn.png" /> http://www.sweetplus.jp/Goods/87253<br />
-<!-- 여기까지 -->
+<!-- 작은슬라이더 -->
+<div arrows="" autoplay="6000" dots="" random="" slide="1">
+    <div>
+        <ul class="col col-320-480-3-0 col-480-768-3-10 col-768-3-10">
+            <li><a href="http://www.sweetplus.jp/Goods/88845"><img alt="작은메인배너1.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/os5txuw3.i1s.png" /></a></li>
+            <li><a href="http://www.sweetplus.jp/Goods/89242"><img alt="작은메인배너2.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/gsyokb04.alf.png" /></a></li>
+            <li><a href="http://www.sweetplus.jp/Goods/88837"><img alt="작은메인배너3.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/sr21oanh.ep5.png" /></a></li>
+        </ul>
+    </div>
+    <div>
+    <ul class="col col-320-480-3-0 col-480-768-3-10 col-768-3-10">
+        <li><a href="http://www.sweetplus.jp/Goods/89242"><img alt="작은메인배너2.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/gsyokb04.alf.png" /></a></li>
+        <li><a href="http://www.sweetplus.jp/Goods/88837"><img alt="작은메인배너3.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/sr21oanh.ep5.png" /></a></li>
+        <li><a href="#"><img alt="작은메인배너4.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/tlibuxef.k3d.png" /></a></li>
+    </ul>
+    </div>
+    <div>
+    <ul class="col col-320-480-3-0 col-480-768-3-10 col-768-3-10">
+        <li><a href="http://www.sweetplus.jp/Goods/88837"><img alt="작은메인배너3.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/sr21oanh.ep5.png" /></a></li>
+        <li><a href="#"><img alt="작은메인배너4.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/tlibuxef.k3d.png" /></a></li>
+        <li><a href="http://www.sweetplus.jp/Goods/88845"><img alt="작은메인배너1.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/os5txuw3.i1s.png" /></a></li>
+    </ul>
+    </div>
+    <div>
+    <ul class="col col-320-480-3-0 col-480-768-3-10 col-768-3-10">
+        <li><a href="#"><img alt="작은메인배너4.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/tlibuxef.k3d.png" /></a></li>
+        <li><a href="http://www.sweetplus.jp/Goods/88845"><img alt="작은메인배너1.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/os5txuw3.i1s.png" /></a></li>
+        <li><a href="http://www.sweetplus.jp/Goods/89242"><img alt="작은메인배너2.png" src="/PartnerData/0V/PartnerInfo/2017/12/04/gsyokb04.alf.png" /></a></li>
+    </ul>
+    </div>
+</div>
+
+<!--New Items-->
+<div style="background:#000; color:#FFF; padding:10px; font-weight:bold;">
+    ★ ニュアイテム
+</div>
+<div style="border:1px solid #ccc;margin-top:0;">
+<ul class="col col-320-480-3-0 col-480-768-3-0 col-768-6-0 tab_menu" style="margin-top:0;">
+    <li class="active"><a href="#" data-target-id="tab_onepiece">ワンピース</a></li>
+    <li><a href="#" data-target-id="tab_top">トップス</a></li>
+    <li><a href="#" data-target-id="tab_bottom">ボトムス</a></li>
+    <li><a href="#" data-target-id="tab_legin">レギンス</a></li>
+    <li><a href="#" data-target-id="tab_outer">アウター</a></li>
+    <li><a href="#" data-target-id="tab_home">授乳服</a></li>
+</ul>
+<div id="tab_onepiece" class="tab_content itembox" style="display:block;">
+    <div goodslist codepath="0Vb5" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+<div id="tab_top" class="tab_content itembox">
+    <div goodslist codepath="0Vb6" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+<div id="tab_bottom" class="tab_content itembox">
+    <div goodslist codepath="0Vb7" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+<div id="tab_legin" class="tab_content itembox">
+    <div goodslist codepath="0Vb4" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+<div id="tab_outer" class="tab_content itembox">
+    <div goodslist codepath="0Vb8" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+<div id="tab_home" class="tab_content itembox">
+    <div goodslist codepath="0Vb9" count="10" recommend="false" class="col col-320-480-2-5 col-480-768-5-5 col-768-5-15" ></div>
+</div>
+</div>
+<div class="videoContainer">
+    <div id="muteYouTubeVideoPlayer"></div>
+</div>
+
+<div style="background:#000; color:#FFF; padding:10px; font-weight:bold;">
+    ★ ベストアイテム
+</div>
+<div class="itembox" style="margin-top:0;">
+<div goodslist codepath="0Vb3" count="16" recommend="false" class="col col-320-480-2-5 col-480-768-4-5 col-768-4-15" ></div>
+</div>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        $(".tab_menu").find('a').click(function(){
+            $(".tab_menu").find('li').removeClass('active');
+            $(this).parent('li').addClass('active');
+            $(".tab_content").hide();
+            var id = $(this).attr("data-target-id");
+            $("#" + id).show();
+        });
+    });
+
+    function onYouTubeIframeAPIReady() {
+        var player;
+        player = new YT.Player('muteYouTubeVideoPlayer', {
+            videoId: 'zY3ylhc9jBc', // YouTube Video ID
+            width: 560,               // Player width (in px)
+            height: 316,              // Player height (in px)
+            playerVars: {
+                autoplay: 1,        // Auto-play the video on load
+                controls: 0,        // Show pause/play buttons in player
+                showinfo: 0,        // Hide the video title
+                modestbranding: 0,  // Hide the Youtube Logo
+                loop: 1,            // Run the video in a loop
+                fs: 0,              // Hide the full screen button
+                cc_load_policy: 0, // Hide closed captions
+                iv_load_policy: 3,  // Hide the Video Annotations
+                autohide: 0,         // Hide video controls when playing
+                rel: 0,
+                version: 3,
+                enablejsapi: 1
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.mute();
+                }
+            }
+        });
+    }
+</script>
