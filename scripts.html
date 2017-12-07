@@ -24,37 +24,39 @@
     <img height="1" width="1" style="display:none"
                         src="https://www.facebook.com/tr?id=282249585619362&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
-
 <!-- Channel Plugin Scripts -->
 <script>
-    window.channelPluginSettings = {
-        "plugin_id": "e77795db-4c52-4e9f-9839-1b31baba23e0",
-//        "user": {
-//            "id": angular.element(document.body).injector().get('$CurrentUser').UserId,
-//            "name": angular.element(document.body).injector().get('$CurrentUser').UserName,
-//            "mobileNumber": false,
-//            "meta": {
-//                "email": angular.element(document.body).injector().get('$CurrentUser').UserEmail
-//            }
-//        }
-    };
-    (function() {
-        var node = document.createElement('div');
-        node.id = 'ch-plugin';
-        document.body.appendChild(node);
-        var async_load = function() {
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-            s.charset = 'UTF-8';
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
+    angular.element(document).ready(function () {
+        window.channelPluginSettings = {
+            "plugin_id": "e77795db-4c52-4e9f-9839-1b31baba23e0",
+            "user": {
+                "id": angular.element(document.body).injector().get('$CurrentUser').UserId,
+                "name": angular.element(document.body).injector().get('$CurrentUser').UserName,
+                "mobileNumber": false,
+                "meta": {
+                    "email": angular.element(document.body).injector().get('$CurrentUser').UserEmail
+                }
+            }
         };
-        if (window.attachEvent) {
-            window.attachEvent('onload', async_load);
-        } else {
-            window.addEventListener('load', async_load, false);
-        }
-    })();
+        console.log(angular.element(document.body).injector().get('$CurrentUser'));
+        (function() {
+            var node = document.createElement('div');
+            node.id = 'ch-plugin';
+            document.body.appendChild(node);
+            var async_load = function() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+                s.charset = 'UTF-8';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            };
+            if (window.attachEvent) {
+                window.attachEvent('onload', async_load);
+            } else {
+                window.addEventListener('load', async_load, false);
+            }
+        })();
+    });
 </script>
