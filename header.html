@@ -26,42 +26,87 @@ header#skin1-header > nav.category > div > ul > li > a:focus ~ ul{
     border-radius: 0;
     box-shadow:0;
 }
+
+/*search box*/
+
+@media screen and (min-width: 48em) {
+    header#skin1-header .search-box{
+        display:none;
+    }
+
+    #pc_search_form{
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 220px;
+        padding: 10px 15px;
+    }
+
+    #pc_search_form button[type="submit"]{
+        position: absolute;
+        background: none;
+        border: none;
+        box-shadow: none;
+        right: 0;
+        top: 0;
+    }
+
+    #pc_search_form button[type="submit"] > span:nth-of-type(1)::before{
+        font-family: tqoon !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: block;
+        content: "";
+        font-size: 1.25rem;
+        color: #666;
+    }
+
+    #pc_search_form button[type="submit"] > span:nth-of-type(1) > span{
+        display:none !important;
+    }
+
+
+    #pc_search_form .box-input{
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background: none;
+    }
+    #pc_search_form .box-input input{
+        border-bottom: 1px solid #666;
+        padding: 7px 15px;
+        box-sizing: border-box;
+        height: 33px;
+    }
+
 }
+
 @media screen and (min-width: 75em){
     header#skin1-header .head h1 img{
         margin-top: -6px;
         max-height: 30px;
     }
-}
-/*search box*/
 
-@media screen and (min-width: 48em) {
-    header#skin1-header .search-box:hover {
-        height: 50px;
-        bottom: 0;
-        border: 3px solid #444;
-        border-radius: 0;
+    #pc_search_form{
+        top: 60px;
     }
-
-    header#skin1-header .search-box:hover .box-input {
-        padding: 10px;
+    header#skin1-header.fixed #pc_search_form button[type="submit"]{
+        right: 10px;
+        top: 10px;
     }
-
-    header#skin1-header .search-box:hover .box-input input {
-        height: 24px;
-        line-height: 24px;
-        font-size: 1.42857rem;
-    }
-
-    header#skin1-header .search-box:hover button {
-        HEIGHT: 45px;
-    }
-
-    header#skin1-header .search-box:hover button span:before {
-        font-size: 25px;
+    header#skin1-header.fixed #pc_search_form{
+        width: 100%;
+        background: rgba(255,255,255,.95);
+        padding: 10px !important;
+        top: 62px;
+        border-bottom: 2px solid #666;
     }
 }
-
 /*product thumbnail*/
 .style-item-grid li a > span.name {
     font-weight: lighter;
@@ -130,7 +175,6 @@ header#skin1-header .head > .quick li > a.notifi > span:nth-of-type(1)::before {
 header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
     content: " カート";
 }
-
 /*mobile only*/
 @media screen and (max-width: 47.99em){
     header#skin1-header .head > .quick li > a.signin > span:nth-of-type(1)::before {
@@ -141,6 +185,36 @@ header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
     }
     header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
         content: "";
+    }
+
+
+    #mobile_search_btn{
+        position: fixed;
+        right: 15px;
+        top: 19px;
+    }
+    #mobile_search_btn span{
+        display:block !important;
+    }
+    #mobile_search_btn > span:nth-of-type(1)::before{
+        font-family: tqoon !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: block;
+        content: " 検索";
+        font-size: 1.25rem;
+        color: #666;
+    }
+
+    #mobile_search_btn > span:nth-of-type(1) > span{
+        display:none !important;
+    }
+    #mobile_search_btn > span:nth-of-type(1)::before {
+        content: "";
     }
 
     header#skin1-header {
@@ -199,29 +273,8 @@ header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
         text-decoration:none;
     }
 
-    #mobile_search_btn{
-        position: fixed;
-        right: 97px;
-        top: 19px;
-    }
-    #mobile_search_btn span{
-        display:block !important;
-    }
-    #mobile_search_btn > span:nth-of-type(1)::before{
-        font-family: tqoon !important;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        display: block;
-        content: "";
-        font-size: 1.25rem;
-        color: #666;
-    }
-    #mobile_search_btn > span:nth-of-type(1) > span{
-        display:none !important;
+    header#skin1-header .head > .quick{
+        padding-right:10px;
     }
 
 }
@@ -229,6 +282,19 @@ header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
 .editor-contents a.button{
     display:inline-block;
 
+}
+
+/* 팝업창 */
+.pop-layer{
+    border:1px solid #e2e2e2;
+    box-shadow:2px 2px 25px #989494;
+}
+@media screen and (max-width: 47.99em){
+    .pop-layer{
+        left:10px !important;
+        top:10px !important;
+        width:320px !important;
+    }
 }
 
 /*모바일,PC전환*/
@@ -254,8 +320,34 @@ header#skin1-header .head > .quick li > a.cart > span:nth-of-type(1)::before {
         display:block;
     }
 }
+    
+#blank_container{
+    position:fixed;
+    width:100%;
+    max-width:1200px;
+    left:50%;
+    top:0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 </style>
 
-<a href="#" onclick="jQuery('.search-box').toggleClass('active');" class="visible_mobile" id="mobile_search_btn"><span><span>検索</span></span></a>
+
+<div id="blank_container">
+    <div style="position:relative;">
+    <form method="post" action="/SearchResult/" id="pc_search_form" class="ng-pristine ng-valid visible_pc">
+        <fieldset>
+            <div class="box-input">
+                <input type="search" name="searchValue" placeholder="検索">
+            </div>
+            <button type="submit"><span><span>検索</span></span></button>
+        </fieldset>
+    </form>
+    <a href="#" onclick="jQuery('.search-box').toggleClass('active');" class="visible_mobile" id="mobile_search_btn"><span><span>検索</span></span></a>
+    </div>
+</div>
 
 <div style="text-align:center"><a href="http://sweetplus.jp"><img alt="logo.png" src="/PartnerData/0V/PartnerInfo/2017/12/03/ygxwusls.zcv.png" /></a></div>
