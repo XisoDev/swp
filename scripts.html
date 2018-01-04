@@ -20,25 +20,44 @@
         'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '282249585619362');
     fbq('track', 'PageView');
-</script><noscript>
-    <img height="1" width="1" style="display:none"
-                        src="https://www.facebook.com/tr?id=282249585619362&ev=PageView&noscript=1" /></noscript>
+</script>
+
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 876539842;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/876539842/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+
+
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=282249585619362&ev=PageView&noscript=1" />
+</noscript>
 <!-- End Facebook Pixel Code -->
 <!-- Channel Plugin Scripts -->
 <script>
-    angular.element(document).ready(function () {
+    angular.module('v2app').run(['$CurrentUser', function ($CurrentUser){
         window.channelPluginSettings = {
-            "plugin_id": "e77795db-4c52-4e9f-9839-1b31baba23e0",
-            "user": {
-                "id": angular.element(document.body).injector().get('$CurrentUser').UserId,
-                "name": angular.element(document.body).injector().get('$CurrentUser').UserName,
-                "mobileNumber": false,
-                "meta": {
-                    "email": angular.element(document.body).injector().get('$CurrentUser').UserEmail
-                }
+                "plugin_id": "e77795db-4c52-4e9f-9839-1b31baba23e0",
+                "user": {
+                    "id": $CurrentUser.UserId,
+                    "name": $CurrentUser.UserName,
+                    "mobileNumber": false,
+                    "meta": {
+                        "email": $CurrentUser.UserEmail
+                    }
             }
         };
-        console.log(angular.element(document.body).injector().get('$CurrentUser'));
+//        console.log(angular.element(document.body).injector().get('$CurrentUser'));
         (function() {
             var node = document.createElement('div');
             node.id = 'ch-plugin';
@@ -58,5 +77,6 @@
                 window.addEventListener('load', async_load, false);
             }
         })();
-    });
+    }]);
+
 </script>
