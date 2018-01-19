@@ -1,0 +1,744 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://www.rakuten.ne.jp/gold/angeliebe/css/y_emergency_response.css");
+html, body
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 62.5%; /*821*/
+
+
+}
+
+
+body
+{
+    background-color: #fff;
+    font-family: Arial, Helvetica, Verdana;
+    /*font-size: 14px;*/
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #666;
+    position: relative;
+    /*-webkit-text-size-adjust: none;*/
+    -webkit-text-size-adjust: 100%;
+}
+body *
+{
+    text-shadow: none;
+}
+
+.container {
+    max-width: 100%;
+    padding:0 5px;
+    box-sizing:border-box;
+    overflow: hidden;
+}
+
+
+.hnav h1 {
+    font-size:0.7rem;
+    margin:0; padding:0;
+}
+
+.header
+{
+    width:100%;
+    background: #fefefe;
+    font-weight: bold;
+    color: #000;
+    line-height: 40px;
+    /*font-size:9px;*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    /*height: 80px;*/
+    /*padding: 0 50px;*/
+    overflow: hidden;
+}
+
+
+.header .row {
+    /*margin:0 0 5px 0;*/
+
+}
+
+
+.menu-padding {
+    padding-top: 15px;
+}
+
+.sp-slide {
+    /*margin:10px 0 0 0;*/}
+
+.navbar {
+    min-height: 35px;
+    margin:0;
+
+}
+
+
+.navbar a:link {
+    color:#494949;
+    text-decoration:none;
+}
+
+.navbar a:visited {
+    color:#494949;
+    text-decoration:none;
+}
+
+.row {
+    margin:0;
+}
+
+.hnav {
+    text-align:center;
+    margin-bottom:5px;
+    boredr:red 1px solid;
+}
+
+.gnav {
+    text-align:center;
+    margin-bottom:5px;
+
+}
+
+
+.b_l {
+    border-bottom:2px #e3c30c solid;
+    text-align:center;
+    background-color:#f8f8f8;
+    height:48px;
+    font-size:0.9rem;
+
+}
+.m_l {
+    border-bottom:2px  #f19794 solid;
+    text-align:center;
+    background-color:#f8f8f8;
+    height:48px;
+    font-size:0.9rem;
+}
+
+/*
+.header.fixed
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+}*/
+
+
+.header a.mm
+{
+    background: center center no-repeat transparent;
+    /*background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );*/
+
+    background-image: url(https://www.rakuten.ne.jp/gold/angeliebe/sp/matanity/images/hm_menu_6.png);
+    background-size:90%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    /*position: absolute;
+    top: 0;
+    right: 10px;*/
+    color:#000000;
+    text-align:center;
+    margin:0 auto;
+}
+
+
+.box_area {
+    width:100%;
+    /*display: box;
+    display: -webkit-box;
+    display: -moz-box;*/
+}
+
+.boxlogo {
+    width: 65% !important;
+    text-align: left;
+    float: left;
+    margin-left:5px;
+}
+
+.box_2{
+    /*width: 12%;*/
+    padding: 0px;
+    margin: 0px 5px 0 0;
+    text-align: center;
+    width: 12%;
+    float: right;
+    position: relative;
+    z-index: 2;
+
+}
+
+
+.header a:link {
+    color:#333;
+    display:block;
+}
+
+.header a:visited {
+    color:#333;
+    display:block;
+}
+
+.header a.search
+{
+    background: center center no-repeat transparent;
+    background-image: url(https://www.rakuten.ne.jp/gold/angeliebe/sp/matanity/images/hm_search_6.png);
+    background-size:90%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    /*position: absolute;
+    top: 0;
+    right: 15px;*/
+    color:#000000;
+    text-align:center;
+    margin:0 auto;
+}
+
+
+
+
+.sp-slide img {
+    max-width: 100%;
+    height:auto !important;
+
+}
+
+
+
+
+nav:not(.mm-menu)
+{
+    display: none;
+}
+
+
+.typebt {
+
+    /*  font-size: 100%;*/
+    font-size: 1.0rem;
+
+}
+
+
+
+
+.btn_b {
+    margin:0px 0 5px 0;
+    padding:12px 8px;
+    border-radius:0;
+    font-size:1.2rem;
+}
+
+.btn_b:hover {
+    padding:12px 8px;
+}
+
+
+.btn-default:hover !important {
+    padding: 6px 12px;
+}
+
+.btn_c {
+    border:none;
+    border:1px #DEDEDE solid;
+    /*font-size:16px;*/
+    border-radius:0;
+
+}
+
+
+
+.navbar-nav {
+    margin: 0;
+}
+
+
+li.media  {
+    padding:5px 0;
+    border-bottom:1px dotted #ccc;}
+
+
+
+
+h3.tittlebar {
+    border-bottom:#828282 1px solid !important;
+    font-size:120% !important;
+    padding:0 0 5px 10px;
+}
+
+h5 {
+    line-height:1.3;
+    /*font-size:11px;*/
+}
+
+
+
+
+.fa{
+    color:#948F8F;
+}
+
+
+.wh {
+    color:#fff;}
+
+.btn-sm {
+    color:#fff;}
+
+
+.topicks  {
+    margin:0 0 10px 0;}
+
+.badge-new {
+    background-color:#F97C90 !important;
+    color:#fff !important;
+}
+
+/*slider
+-----------------------------------------*/
+ul.item
+Img {
+    width:100%;
+    margin:0;
+    padding:10px;
+}
+
+ul.itemImg  li {
+    width:70%;
+    list-style:none;
+    float:left;
+    border:#ccc 1px solid;}
+
+ul.itemImg li.items {
+    list-style:none;
+    float:right;
+    width:25%;
+    margin:0;
+    padding:0;
+    text-align:center;
+    border:0;
+}
+
+.cordinatetxt01	{
+    width:100%;
+    padding:5px 10px 5px;
+    background-color:#F3F3F3;
+    /*font-size:12px;*/
+    margin:0;
+}
+
+
+
+
+/*	  modal
+/* ------------------------------------- */
+
+.well {
+
+    padding: 19px 10px;
+}
+
+ul.modal_c    {
+    display:table;
+    width:100%;
+    border:1px solid red;
+}
+ul.modal_c  li{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    width:50%;
+    border:1px solid blue;
+}
+
+
+
+
+.typeb {
+    width:49.7%;
+    float:right;
+    border:1px solid #ccc;
+    border-radius:0;
+    /*font-size:11px;*/
+}
+
+
+.typeb a:link ,.typeb a:visited {
+    color:#333;
+}
+
+.typec a:link ,.typec a:visited {
+    color:#333;
+}
+
+.num {
+    width:21%;
+}
+
+.typec {
+    width:49.7%;
+    float:right;
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-radius:0;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    /*font-size:11px;*/
+}
+
+
+/*.typebb {
+	width:49.4%;
+	float:right;
+	border-top:1px solid #beb014;;
+	border-radius:5;
+	border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+	font-size:11px;
+	}
+
+.typeg {
+	width:49.4%;
+	float:right;
+	border:1px solid #77a9a1;
+	border-radius:5;
+	border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+	font-size:11px;
+	}	*/
+
+
+.modal-body {
+    position: relative;
+    padding: 12px;
+}
+
+
+.modal .list-group-item:first-child {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.modal .list-group-item:last-child {
+    margin-bottom: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.list-group-item > .badge2 {
+    float: right;
+}
+
+.list-group-item {
+    font-size:1.1rem;
+    padding: 10px 5px;
+}
+.badge2 {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    /*font-size: 12px;*/
+    font-weight: bold;
+    color: #FFF;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #FCCE45;
+    border-radius: 10px;
+}
+
+
+ul.brandul {
+    width:100%;
+    margin:0 auto;
+    padding:0;}
+
+
+ul.brandul li {
+    list-style:none;
+    width:49.5%;
+    float:left;
+
+}
+
+ul.brandul li:first-child {
+    margin:0 3px 0 0;}
+
+
+ul.brandul li.bgb button {
+    background-color:#E1D900;
+    border:1px #cbcb7d solid;
+}
+
+ul.brandul li.bgg button {
+    background-color:#93d6cf;
+    margin-right:3px;
+    border:1px #73b6a5 solid;}
+
+ul.brandul li a:link ,ul.brandul li a:visited{
+    color:#FFFFFF;
+}
+
+ul.brandul li i.fa {
+    color:#fff;
+}
+
+
+/*	  Footer
+/* ------------------------------------- */
+#footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #E0E0E0;
+    /*font-size:10px;*/
+    box-sizing:border-box;
+}
+
+
+/*  nav
+/*--------------------------------- */
+
+#footer .navbar-nav {
+    padding:0;
+    margin:0 0 10px 0;
+}
+
+
+#footer .navbar-nav>li {
+    /*border-right: 1px solid #ccc;*/
+}
+
+
+#footer .navbar-nav li.middle {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+#footer .navbar-nav>li.first{
+    /*border-left: 1px solid #333;*/
+}
+
+#footer .navbar-nav li a{
+    color: #333;
+}
+
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a:link {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    vertical-align:middle;
+    display: block;
+    width: 55px;
+    height: 55px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: #f19794;
+    opacity: 0.8;
+    line-height:1.3;
+}
+
+
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+.acbt {
+    border:#ccc 1px dotted; text-align:center; padding:15px auto;
+
+
+}
+
+
+/*  copy
+/*--------------------------------- */
+.copy{
+    margin-top: 10px;
+}
+
+.copy span{
+    color: #333;
+}
+
+/* keyword 16.04.18
+----------------------------------------- */
+
+.keyword_erea {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px 6px;
+    background-color: #DCD8D8;
+    box-sizing: border-box;
+}
+
+ul.keyword_erea_inner {
+    font-size: 90%;
+    /*width: 940px;*/
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+
+ul.keyword_erea_inner li:first-child {
+    /* font-weight: bold;
+     display: block;
+     width: 140px;
+     margin: 1px;
+    padding: 5px 7px;
+     text-align: center;
+     text-decoration: none;
+     color: #333;
+     background-color: #F3F3F3;
+     border: 0;
+     border-radius: 0;*/
+    display:none;
+}
+
+
+
+
+ul.keyword_erea_inner li {
+    display: inline;
+    float: left;
+    min-width: 80px;
+    margin: 2px;
+    padding: 0px 8px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+ul.keyword_erea_inner li:hover {
+    background-color:#E8E8E8;
+}
+
+
+ul.keyword_erea_inner li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size:80%;
+}
+
+li.sp_none {
+    display:none !important;}
+
+
+
+/* bunner 16.05.17
+----------------------------------------- */
+
+.bunner_event {
+    position: relative;
+    border: #ccc 1px solid;
+    height:100px;
+    margin:0;
+    padding:0;
+
+}
+.bunner_event iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility:visible;
+    overflow:visible;
+    background: transparent !important;
+    color: transparent !important;
+    background-color: transparent !important;
+}
+
+
+.swiper-container {
+    margin: 0;
+    padding: 0;
+    padding: 0 0 20px 0;
+}
+
+
+.swiper-slide img {
+    max-width: 360px;
+
+}
+
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0px !important;
+    left: 0;
+    width: 100%;
+}
+
+#header {
+    height: 75px !important;
+}
+
+.pay {
+    display: none !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #F49B9C;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* attention_erea 17.03
+----------------------------------------- */
+.attention_erea{
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+    background: #eeeeee;
+
+}
+
+.attention_erea a.attention_erea_link{
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+}
+

@@ -1,0 +1,118 @@
+@charset 'utf-8';
+
+/* CSS Document */
+
+
+/* 繧ｰ繝ｭ繝ｼ繝舌Ν繝翫ン  */
+.menu ul {
+    z-index: 999;
+    width: 940px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu ul li {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 40px;
+    position: relative;
+    float: left;
+    width: 134px;
+    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ蟷�*/
+    height: 30px;
+    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ鬮倥＆*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    color: #4d4d4d;
+    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ譁�ｭ苓牡*/
+    background: #fff;
+    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
+    /* border-bottom:2px #cccccc solid;
+   border-top:1px #9E9E9E solid;*/
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.menu ul li:hover,
+.menu ul li a:hover {
+    color: #333;
+    /*繝帙ヰ繝ｼ譎ゅ�隕ｪ繝｡繝九Η繝ｼ縺ｮ譁�ｭ苓牡*/
+    background: #f19693;
+    /*繝帙ヰ繝ｼ譎ゅ�隕ｪ繝｡繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
+}
+
+.menu ul li ul {
+    position: absolute;
+    z-index: 100;
+    top: 30px;
+    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ鬮倥＆縺ｨ蜷後§縺ｫ縺吶ｋ*/
+    width: 156px;
+}
+
+.menu ul li ul li {
+    font-size: 11px;
+    font-weight: normal;
+    visibility: hidden;
+    overflow: hidden;
+    width: 190px;
+    /*繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ蟷�*/
+    height: 0;
+    text-indent: 0;
+    border-bottom: 1px #ccc dotted;
+    background: #fff;
+    /*繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
+    /* background-image:url(https://www.angeliebe.co.jp/images/parts_rn/mod_ico_arrowGray_01.gif) ;
+  background-position: 25px 1em;
+  background-repeat:no-repeat;*/
+}
+
+.menu ul li ul li:hover,
+.menu ul li ul li a:hover {
+    background: #cbcbcb;
+    /*繝帙ヰ繝ｼ譎ゅ�繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
+}
+
+.menu ul li:hover ul li,
+.menu ul li a:hover ul li {
+    z-index: 10;
+    visibility: visible;
+    overflow: visible;
+    height: 40px;
+    /*繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ鬮倥＆*/
+}
+
+.menu * {
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+
+/* 繧ｰ繝ｭ繝ｼ繝舌Ν繝翫ン  */
+
+.clearfix {
+    display: inline-table;
+}
+
+
+/* Hides from IE-mac \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/* End hide from IE-mac */
