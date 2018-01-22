@@ -18,20 +18,15 @@
     line-height: 40px;
     position: relative;
     float: left;
-    width: 134px;
-    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ蟷�*/
-    height: 30px;
-    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ鬮倥＆*/
+    width: 104px;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
     color: #4d4d4d;
-    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ譁�ｭ苓牡*/
     background: #fff;
-    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
-    /* border-bottom:2px #cccccc solid;
-   border-top:1px #9E9E9E solid;*/
+    border-bottom:2px #cccccc solid;
+   border-top:1px #9E9E9E solid;
 }
 
 .menu ul li a {
@@ -42,17 +37,14 @@
 
 .menu ul li:hover,
 .menu ul li a:hover {
-    color: #333;
-    /*繝帙ヰ繝ｼ譎ゅ�隕ｪ繝｡繝九Η繝ｼ縺ｮ譁�ｭ苓牡*/
+    color: #fff;
     background: #f19693;
-    /*繝帙ヰ繝ｼ譎ゅ�隕ｪ繝｡繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
 }
 
 .menu ul li ul {
     position: absolute;
     z-index: 100;
     top: 30px;
-    /*隕ｪ繝｡繝九Η繝ｼ縺ｮ鬮倥＆縺ｨ蜷後§縺ｫ縺吶ｋ*/
     width: 156px;
 }
 
@@ -62,15 +54,10 @@
     visibility: hidden;
     overflow: hidden;
     width: 190px;
-    /*繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ蟷�*/
     height: 0;
     text-indent: 0;
     border-bottom: 1px #ccc dotted;
     background: #fff;
-    /*繧ｵ繝悶Γ繝九Η繝ｼ縺ｮ閭梧勹濶ｲ*/
-    /* background-image:url(https://www.angeliebe.co.jp/images/parts_rn/mod_ico_arrowGray_01.gif) ;
-  background-position: 25px 1em;
-  background-repeat:no-repeat;*/
 }
 
 .menu ul li ul li:hover,
