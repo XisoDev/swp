@@ -1,0 +1,604 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <script type="text/javascript"  src="https://shopping.geocities.jp/angeliebe/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"  src="https://shopping.geocities.jp/angeliebe/js/owl.carousel.min.js"></script>
+    <style type="text/css"><!--
+        .owl-carousel {
+            display: none;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+            /* position relative and z-index fix webkit rendering fonts issue */
+            position: relative;
+            z-index: 1;
+        }
+        .owl-carousel .owl-stage {
+            position: relative;
+            -ms-touch-action: pan-Y;
+        }
+        .owl-carousel .owl-stage:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        .owl-carousel .owl-stage-outer {
+            position: relative;
+            overflow: hidden;
+            /* fix for flashing background */
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        .owl-carousel .owl-controls .owl-nav .owl-prev,
+        .owl-carousel .owl-controls .owl-nav .owl-next,
+        .owl-carousel .owl-controls .owl-dot {
+            cursor: pointer;
+            cursor: hand;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .owl-carousel.owl-loaded {
+            display: block;
+        }
+        .owl-carousel.owl-loading {
+            opacity: 0;
+            display: block;
+        }
+        .owl-carousel.owl-hidden {
+            opacity: 0;
+        }
+        .owl-carousel .owl-refresh .owl-item {
+            display: none;
+        }
+        .owl-carousel .owl-item {
+            position: relative;
+            min-height: 1px;
+            float: left;
+            -webkit-backface-visibility: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .owl-carousel.owl-text-select-on .owl-item {
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto;
+        }
+        .owl-carousel .owl-grab {
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: -o-grab;
+            cursor: -ms-grab;
+            cursor: grab;
+        }
+        /* No Js */
+        .no-js .owl-carousel {
+            display: block;
+        }
+        .owl-nav img.left {
+            position: fixed;
+            top:50px;
+            right:0px;
+        }
+        .owl-nav img.right {
+            position: fixed;
+            top:50px;
+            left:0px;
+        }
+        --></style>
+
+    <style type="text/css">
+        <!--
+        /*-------- default ---------*/
+        html, body {
+            margin: 0; padding: 0;
+            height: 100%;
+            overflow: hidden;
+            word-break: break-all;
+            color:#333;
+        }
+        div.carousel {
+            margin:0;
+            font-size:12px;
+            line-height:1.3;
+            padding:0;
+        }
+        a:link {
+            color:#666;
+        }
+        /*-------- outside ---------*/
+        #wrapper{
+            overflow: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            margin: 0;
+            padding: 0 5px;
+            position: absolute;
+            left: 0px;
+            right: 0;
+            top: 0px;
+            bottom: 0;
+            border: solid 1px #ccc;
+            background-color: #fff;
+        }
+        /*-------- head ---------*/
+        div.update{
+            padding:0;
+            height:27px;
+        }
+        p.update, p.left, p.right{
+            font-size:12px;
+            color:#000;
+            text-align:right;
+            position:fixed;
+            top:0;
+            right:0;
+            width:100%;
+            padding:0 10px 0 0;
+            height:17px;
+            border-bottom:solid 1px #ccc;
+        }
+        p.left{
+            left:1px;
+            width:5px;
+            padding:0;
+            border-bottom:solid 1px #fff;
+        }
+        p.right{
+            right:1px;
+            width:5px;
+            padding:0;
+            border-bottom:solid 1px #fff;
+        }
+        /*-------- items ---------*/
+        div.odd{background-color:#fff}
+        div.even{background-color:#fff}
+        div.item{
+            padding:5px 0;
+            margin:5px 0 0 0;
+            vertical-align:top;
+            text-align:center;
+        }
+        div.item div{
+            margin:0 auto;
+        }
+        p.img{
+            text-align:center;
+            padding:5px 0;
+            margin:0;
+        }
+        span.update{
+            display:block;
+            padding:2px;
+        }
+        span.name{
+            display:block;
+            text-align:left;
+            padding:2px;
+        }
+        span.price{
+            display:block;
+            padding:2px;
+            font-size:14px;
+            color:#f00;
+            font-weight:bold;
+        }
+
+        -->
+
+
+
+
+
+
+    </style>
+
+    <style type="text/css"><!--
+        p.img img{
+            max-width: 128px;
+            max-height: 128px;
+
+        }
+        --></style>
+</head>
+<!----------
+編集領域以外は触らない出ください。
+------------------------------>
+<body>
+<div id="wrapper">
+    <div class="carousel">
+        <!--------------編集領域START--------------------->
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22356.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22356" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22356.html" target="_top">授乳口付 レイヤードニットソートップス  </a></span>
+                <span class="price">4,309円</span>
+            </div>
+            <!--./item--></div>
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22313.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22313" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22313.html" target="_top"> 授乳口しやすい フレアーフロントヘムプルオーバー</a></span>
+                <span class="price">4,946円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22314.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22314" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22314.html" target="_top">産前産後対応 あったか ボンディングタイトスカート</a></span>
+                <span class="price">4,946円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22315.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22315" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22315.html" target="_top">
+産前産後対応 あったか ボンディングフレアースカート </a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22328.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22328" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22328.html" target="_top">
+mutti ei 授乳口付 スムースランダムドットプリントパジャマ</a></span>
+                <span class="price">3,769円</span>
+            </div>
+            <!--./item--></div>
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22329.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22329" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22329.html" target="_top">mutti ei 授乳口付 スムースボーダーネグリジェ</a></span>
+                <span class="price">3,229円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22331.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22331" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22331.html" target="_top">mutti ei 授乳口付 スムースランダム星柄パジャマ</a></span>
+                <span class="price">3,769円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22349.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22349" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22349.html" target="_top">mutti ei 授乳口付 スムースボーダー×無地パンツ ベーシックパジャマ</a></span>
+                <span class="price">3,769円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22355.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22355" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22355.html" target="_top">産前産後対応 ストレッチ細コールベロアギャザースカート </a></span>
+                <span class="price">4,968円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22357.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22357" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22357.html" target="_top">産前産後対応 ベロアタックワイドパンツ</a></span>
+                <span class="price">4,968円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22358.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22358" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22358.html" target="_top">
+授乳口付 セット Vネックトップス＆ 産前産後対応 ロングタイトスカートセットアップ</a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22364.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22364" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22364.html" target="_top">授乳口付 セット ストレッチ細コールベロアキャミワンピース＆長袖リブトップスセット</a></span>
+                <span class="price">6,458円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22294.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22294" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22294.html" target="_top">授乳口付 あったか やわらか裏起毛 リボンポケットパジャマ＆産後も使えるパンツ</a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22350.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22350" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22350.html" target="_top">授乳しやすい キャンディモールボトルネックニット </a></span>
+                <span class="price">4,309円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22353.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22353" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22353.html" target="_top">授乳しやすい ふんわりタートルニット</a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22351.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22351" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22351.html" target="_top">弾力起毛ボリュームスリーブコーディガン </a></span>
+                <span class="price">6,458円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22354.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22354" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22354.html" target="_top">授乳口付 セット ベルスリーブVネックニットソーワンピース</a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22367.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22367" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22367.html" target="_top">授乳口付 セット ツィードトップス＆産前産後対応スカートセットアップ </a></span>
+                <span class="price">7,538円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22369.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22369" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22369.html" target="_top">fairy 授乳口付 あったか 裏シャギー ドッキングワンピース</a></span>
+                <span class="price">5,378円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22375.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22375" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22375.html" target="_top">産前産後対応 グレンチェック リボン付きワイドパンツ</a></span>
+                <span class="price">6,458円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/22376.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_22376" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/22376.html" target="_top">授乳口付 グレンチェックボリュームスリーブワンピース </a></span>
+                <span class="price">7,538円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/26035.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_26035" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/26035.html" target="_top">gelato pique アニマルスリープ母子手帳ケース</a></span>
+                <span class="price">3,240円</span>
+            </div>
+            <!--./item--></div>
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/26037.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_26037" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/26037.html" target="_top">gelato pique ジェラートグラデボーダーマルチカバー</a></span>
+                <span class="price">6,264円</span>
+            </div>
+            <!--./item--></div>
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/26038.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_26038" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/26038.html" target="_top">gelato pique ヘアバンド ジェラートピケ </a></span>
+                <span class="price">2,160円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+        <div class="item">
+            <div style="width:128px">
+                <p class="img" style="min-height:96px;">
+                    <a href="https://store.shopping.yahoo.co.jp/angeliebe/26039.html" target="_top">
+                        <img src="https://item-shopping.c.yimg.jp/i/j/angeliebe_26039" width="96"></a></p>
+                <span class="update">12月20日</span>
+                <span class="name"><a href="https://store.shopping.yahoo.co.jp/angeliebe/26039.html" target="_top">gelato pique アクアドライリブリボンスリッパ</a></span>
+                <span class="price">3,456円</span>
+            </div>
+            <!--./item--></div>
+
+
+
+
+
+        <!--------------編集領域END--------------------->
+        <!--./carousel--></div>
+    <!--./wrapper--></div>
+
+<script>
+    var owl = $('.carousel');
+    owl.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: (5*1000),
+        autoplaySpeed: 500,
+        autoplayHoverPause: true,
+        margin:0,
+        loop:true,
+        nav:true,
+        navText:['<img src="https://a.ichiba.jp.rakuten-static.com/com/img/thumb/top/btn_15x95_r.gif" class="left">',
+            '<img src="https://a.ichiba.jp.rakuten-static.com/com/img/thumb/top/btn_15x95_l.gif" class="right">'],
+        responsive:{
+            150:{ items: 1 }, 300: { items: 2 }, 450: { items: 3 }, 600: { items: 4 },
+            750:{ items: 5 }, 900: { items: 6 }, 1050: { items: 7 },
+        }
+    })
+</script>
+</body>
+</html>
